@@ -15,7 +15,15 @@ angular.module('fluidbox', [])
         viewportFill: attrs.viewportFill || 0.95
       };
 
-      element.fluidbox(options);
+      if (attrs.ngHref) {
+        attrs.$observe('href', function(val) {
+          if (val) {
+            element.fluidbox(options);
+          }
+        });
+      } else {
+        element.fluidbox(options);
+      }
 
       scope.$on('$destroy', function() {
         element.fluidbox('destroy');

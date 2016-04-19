@@ -28,9 +28,10 @@ Last step is to use the directive this way
 </a>
 ```
 
+The directive will observe on `ng-href` attributes by default
+( if there are any )
 
 ##TODO
 
 * Service for closing, opening etc fluidbox instances
-* Options observe?
 * Events broadcast?
